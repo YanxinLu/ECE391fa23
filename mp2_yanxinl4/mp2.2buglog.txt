@@ -1,0 +1,34 @@
+[bug 1]
+type: algorithmic error
+symptom: the programe can compile but crash without showing the screen
+difficulty of finding the bug: 1 hour
+difficulty of fixing the bug: 10 lines
+solution: consider the condition of node.cnt=0 without using it as dividend; fseek before going over the file data again
+
+[bug 2]
+type: algorithmic error
+symptom: buttons don't work
+difficulty of finding the bug: 5 hours
+difficulty of fixing the bug: 3 lines
+solution: wrongly shift the button bit; change button with &, so the pressed button will not be released; static variables so th variables can't be accessed
+
+[bug 3]
+type: algorithmic error
+symptom: LEDs don't work
+difficulty of finding the bug: 30min
+difficulty of fixing the bug: 1 lines
+solution: change the time num to hex
+
+[bug 4]
+type: semantic error
+symptom: LED incorrect display
+difficulty of finding the bug: 3 hours
+difficulty of fixing the bug: 2 lines
+solution: or 0x040F0000 to the time hex; curr_time - tick_time instead of cur_time - start_time
+
+[bug 5]
+type: specification ambiguous error
+symptom: the photo is moving and flashing
+difficulty of finding the bug: 1 hour
+difficulty of fixing the bug: 1 line
+solution: printk() should be deleted

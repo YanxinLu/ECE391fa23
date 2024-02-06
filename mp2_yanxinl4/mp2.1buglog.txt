@@ -1,0 +1,27 @@
+[bug 1]
+type: semantic error
+symptom: the status bar is on the top of the screen and flashing.
+difficulty of finding the bug: 90 minutes
+difficulty of fixing the bug: 5 lines
+solution: modify the VGA registers and set the target_img to leave a memory space for the status bar
+
+[bug 2]
+type: semantic error
+symptom: the status message overlap on the screen.
+difficulty of finding the bug: 2 minutes
+difficulty of fixing the bug: 1 line
+solution: add i_text*FONT_WIDTH
+
+[bug 3]
+type: specification ambiguity error
+symptom: the status message can't show correctly on the screen.
+difficulty of finding the bug: 60 minutes
+difficulty of fixing the bug: 3 lines
+solution: correct the way to calculate the offset of the pixel in the buffer plane
+
+[bug 4]
+type: specification ambiguity error
+symptom: the first image can't move vertically but demo can move.
+difficulty of finding the bug: 10 minutes
+difficulty of fixing the bug: 1 line
+solution: modify the IMAGE_Y_DIM to 182
